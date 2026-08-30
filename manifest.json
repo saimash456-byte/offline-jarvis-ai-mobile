@@ -1,0 +1,20 @@
+```json
+{
+  "name": "JARVIS Voice AI",
+  "short_name": "JARVIS",
+  "description": "JARVIS Voice AI mobile assistant",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#05080d",
+  "theme_color": "#05080d",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
+```
