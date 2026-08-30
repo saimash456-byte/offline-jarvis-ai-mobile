@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+    <defs>
+        <!-- Background Radial Gradient -->
+        <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#0f0c20"/>
+            <stop offset="100%" stop-color="#030208"/>
+        </radialGradient>
+
+        <!-- Neon Glow Filter -->
+        <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="6" result="blur" />
+            <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+
+        <!-- Color Gradients -->
+        <linearGradient id="pinkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#ff0077"/>
+            <stop offset="100%" stop-color="#ff55a5"/>
+        </linearGradient>
+
+        <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#00f2ff"/>
+            <stop offset="100%" stop-color="#0077ff"/>
+        </linearGradient>
+    </defs>
+
+    <!-- Background Base -->
+    <rect width="512" height="512" rx="110" fill="url(#bgGrad)"/>
+
+    <!-- Tech HUD Outer Rings -->
+    <circle cx="256" cy="256" r="210" fill="none" stroke="url(#cyanGrad)" stroke-width="3" opacity="0.4" stroke-dasharray="15 10"/>
+    <circle cx="256" cy="256" r="195" fill="none" stroke="url(#pinkGrad)" stroke-width="2" opacity="0.3"/>
+    
+    <!-- Rotating Hexagon Framework Accent -->
+    <polygon points="256,66 420,161 420,351 256,446 92,351 92,161" fill="none" stroke="#00f2ff" stroke-width="1.5" opacity="0.25"/>
+
+    <!-- Geometric Glowing AS Monogram -->
+    <g filter="url(#neonGlow)">
+        <!-- Letter 'A' (Cyan Neon) -->
+        <path d="M 130 350 L 210 160 L 250 160 L 290 255" fill="none" stroke="url(#cyanGrad)" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+        <line x1="170" y1="270" x2="255" y2="270" stroke="url(#cyanGrad)" stroke-width="18" stroke-linecap="round"/>
+        
+        <!-- Letter 'S' Overlay (Pink Neon) -->
+        <path d="M 370 190 C 370 160, 310 150, 280 190 C 250 230, 370 260, 340 310 C 310 360, 230 350, 220 320" fill="none" stroke="url(#pinkGrad)" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <!-- Futuristic Tech Dots Accent -->
+    <circle cx="210" cy="160" r="5" fill="#ffffff" filter="url(#neonGlow)"/>
+    <circle cx="370" cy="190" r="5" fill="#ffffff" filter="url(#neonGlow)"/>
+    <circle cx="220" cy="320" r="5" fill="#ffffff" filter="url(#neonGlow)"/>
+</svg>
